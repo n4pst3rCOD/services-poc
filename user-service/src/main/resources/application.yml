@@ -1,0 +1,20 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          azure-ad-b2c:
+            client-name: Azure AD B2C Login
+            client-id: 1d37c67a-38a3-4fcb-92b3-0c7857fff10a
+            client-secret: y~uspn46s9lb45g1jvlNUOGKEE-Bo_10p_
+            authorization-grant-type: authorization_code
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+#            redirect-uri: "http://localhost:8080/login/oauth2/code/azure-ad-b2c"
+            scope: openid, email
+        provider:
+          azure-ad-b2c:
+            issuer-uri: https://login.microsoftonline.com/76e59a7c-e3df-4992-ad85-2ece50ef0ff8/v2.0
+
+logging:
+  level:
+    root: DEBUG
